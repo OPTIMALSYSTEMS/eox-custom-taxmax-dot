@@ -1,1 +1,16 @@
 
+<div>
+
+  <div class="dragger">
+    <img src="assets/ic_close.png" (click)="close()">
+  </div>
+
+  <img class="logo" src="assets/taxmax.png"/>
+
+  <app-login *ngIf="!authenticated; else loggedIn"></app-login>
+
+  <ng-template #loggedIn>
+    You are logged in
+  </ng-template>
+
+</div>

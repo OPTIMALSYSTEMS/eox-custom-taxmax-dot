@@ -9,7 +9,7 @@ function createWindow() {
     alwaysOnTop: true,
     autoHideMenuBar: true,
     maximizable: false,
-    frame: devMode,
+    frame: false,
     transparent: true,
     resizable: devMode
   });

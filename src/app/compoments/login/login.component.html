@@ -1,0 +1,6 @@
+<form (ngSubmit)="login()" #loginForm="ngForm">
+  <div class="form-error" *ngIf="loginError">{{loginError}}</div>
+  <input type="text" [(ngModel)]="form.clientNo" name="client" placeholder="Client No." required>
+  <input type="password" [(ngModel)]="form.password" autofocus="autofocus" name="password" placeholder="password" required>
+  <button [disabled]="loginForm.invalid">OK</button>
+</form>

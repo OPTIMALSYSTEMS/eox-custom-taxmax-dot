@@ -1,0 +1,51 @@
+@import "../styles.vars";
+
+:host > div {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: column;
+  justify-content: flex-end;
+  height: $app-height;
+  width: $app-width;
+  padding: 12px 12px 12px ($app-dragger-width + 12);
+  background-color: $color-primary;
+  color: #fff;
+  text-align: right;
+  font-family: monospace;
+  transition: all 200ms ease-in-out;
+
+  .dragger {
+    -webkit-app-region: drag;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $app-dragger-width;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 16px;
+    background-color: rgba($color-accent, .7);
+
+    img {
+      -webkit-app-region: no-drag;
+      position: absolute;
+      top:2px; left:2px;
+      opacity: .5;
+      cursor:pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+
+  img.logo {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+}
