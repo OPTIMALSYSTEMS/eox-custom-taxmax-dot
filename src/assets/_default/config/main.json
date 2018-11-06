@@ -1,0 +1,30 @@
+{
+  "uri": {
+    "serviceBase": "/rest-ws/service",
+    "searchBase": "/search",
+    "contextBase": "/structure",
+    "inboxBase": "/inboxservice",
+    "bpmBase": "/bpm",
+    "agentBase": "/agent"
+  },
+  "search": {
+    "searchMode": "idxs",
+    "limit": 100
+  },
+  "languages": [
+    {
+      "iso": "de",
+      "label": "Deutsch"
+    },
+    {
+      "iso": "en",
+      "label": "English",
+      "fallback": true
+    }
+  ],
+  "agent": {
+    "alias": "",
+    "autoconnect": false
+  },
+  "licenseKey": "Optimal_Systems_GmbH__Devs_UnlimitedOEM_31_May_2019__MTU1OTI1NzIwMDAwMA==67c90958212e42b25c4504e1c9f9ead9"
+}
