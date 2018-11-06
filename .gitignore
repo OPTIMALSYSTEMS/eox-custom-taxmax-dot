@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+/electron/node_modules
+/electron/app
+
 # compiled output
 /dist
 /tmp

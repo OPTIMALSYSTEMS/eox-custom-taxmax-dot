@@ -1,0 +1,32 @@
+{
+  "name": "taxmax-dot",
+  "version": "0.0.1",
+  "description": "custom client demo",
+  "author": "OPTIMAL SYSTEMS GmbH",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "de.enaio.dot.desktop",
+    "productName": "enaio desktop dot",
+    "copyright": "OPTIMAL SYSTEMS GmbH",
+    "directories": {
+      "output": "../dist"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "../src/favicon.ico"
+    },
+    "linux": {
+      "icon": "../src/favicon.ico"
+    },
+    "mac": {
+      "icon": "../src/favicon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "2.0.3",
+    "electron-builder": "20.26.1"
+  }
+}
