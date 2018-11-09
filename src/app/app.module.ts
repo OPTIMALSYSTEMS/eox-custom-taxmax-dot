@@ -4,6 +4,7 @@ import {EoCoreModule} from '@eo-sdk/core';
 import {FileDropModule} from 'ngx-file-drop';
 import {AppComponent} from './app.component';
 import { LoginComponent } from './components/login/login.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     FileDropModule,
     EoCoreModule.forRoot()
   ],

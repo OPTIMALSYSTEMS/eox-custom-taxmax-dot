@@ -10,7 +10,7 @@ export class AppComponent {
 
   authenticated: boolean;
 
-  constructor(private auth: AuthService) {
+  constructor(private auth: AuthService){
     this.auth.authenticated$.subscribe(authenticated => this.authenticated = authenticated);
   }
 

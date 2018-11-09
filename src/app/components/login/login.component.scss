@@ -1,0 +1,51 @@
+@import "../../../styles.vars";
+
+form {
+  input[type=text] {
+    flex: 0 0 40px;
+  }
+  input[type=password] {
+    margin: 0 2px;
+  }
+
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  justify-content: flex-end;
+
+  input {
+    background-color: rgba(255, 255, 255, .2);
+    outline: 0;
+    flex: 1;
+    color: #fff;
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(255, 255, 255, .4);
+    }
+  }
+  button {
+    background-color: $color-accent;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+
+    &[disabled] {
+      background-color: rgba(255, 255, 255, .2);
+      opacity: .7;
+    }
+  }
+
+  .form-error {
+    background-color: $color-error;
+    font-size: 11px;
+    position: absolute;
+    top: -22px;
+    padding: 2px 5px;
+    line-height: 1em;
+  }
+}
