@@ -1,10 +1,10 @@
 import {Component, HostListener} from '@angular/core';
-import {AuthService, DmsService} from "@eo-sdk/core";
+import {AuthService, BpmService, DmsService} from "@eo-sdk/core";
 import {AppService, Client} from "./app.service";
 import {FileSystemFileEntry, UploadEvent} from "ngx-file-drop";
 import {of as observableOf, forkJoin as observableForkJoin, Observable} from 'rxjs';
 import {APP_CONSTANTS} from "./app.constants";
-import {catchError} from "rxjs/internal/operators";
+import {catchError, switchMap} from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -28,7 +28,9 @@ export class AppComponent {
     event.preventDefault();
   }
 
-  constructor(private auth: AuthService, private appService:AppService, private dmsService: DmsService){
+  constructor(private auth: AuthService, private appService:AppService,
+              private bpmService: BpmService,
+              private dmsService: DmsService){
     this.auth.authenticated$.subscribe(authenticated => this.authenticated = authenticated);
     this.appService.client$.subscribe(client => this.client = client);
   }
