@@ -5,11 +5,13 @@ import {FileDropModule} from 'ngx-file-drop';
 import {AppComponent} from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from "@angular/forms";
+import { UploadIndicatorComponent } from './components/upload-indicator/upload-indicator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    UploadIndicatorComponent
   ],
   imports: [
     BrowserModule,

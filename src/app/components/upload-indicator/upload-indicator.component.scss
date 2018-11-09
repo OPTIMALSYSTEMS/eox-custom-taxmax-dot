@@ -1,0 +1,86 @@
+@import "../../../styles.vars";
+
+.state {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 200ms ease-in-out;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-accent;
+  user-select: none;
+
+  &.busy, &.done, &.error {
+    width: $app-height;
+  }
+  &.done {
+    background-color: $color-success;
+  }
+  &.error {
+    background-color: $color-error;
+  }
+
+  .spinner {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+
+    div {
+      position: absolute;
+      top: 27px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #fff;
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+      &:nth-child(1) {
+        left: 6px;
+        animation: spinner1 0.6s infinite;
+      }
+      &:nth-child(2) {
+        left: 6px;
+        animation: spinner2 0.6s infinite;
+      }
+      &:nth-child(3) {
+        left: 26px;
+        animation: spinner2 0.6s infinite;
+      }
+      &:nth-child(4) {
+        left: 45px;
+        animation: spinner3 0.6s infinite;
+      }
+    }
+  }
+
+  @keyframes spinner1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@keyframes spinner3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes spinner2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+}

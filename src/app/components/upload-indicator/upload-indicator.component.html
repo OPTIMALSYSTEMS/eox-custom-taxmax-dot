@@ -1,0 +1,5 @@
+<div class="state" [ngSwitch]="state" [ngClass]="{done: state === 'done', error: state === 'error', busy: state === 'busy'}">
+  <div class="box" *ngSwitchCase="'done'"><img src="assets/ic_success.png"/></div>
+  <div class="box" *ngSwitchCase="'error'"><img src="assets/ic_fail.png"/></div>
+  <div class="spinner" *ngSwitchCase="'busy'"><div></div><div></div><div></div><div></div></div>
+</div>

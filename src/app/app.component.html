@@ -1,5 +1,5 @@
 
-<div>
+<div [ngClass]="{dragover: state === 'dragover'}">
 
   <div class="dragger">
     <img src="assets/ic_close.png" (click)="close()">
@@ -11,6 +11,8 @@
 
   <ng-template #loggedIn>
     {{client?.contextFolderTitle}}
+    <app-upload-indicator [state]="state"></app-upload-indicator>
+    <file-drop (onFileDrop)="filesDropped($event)" (onFileOver)="state = 'dragover'" (onFileLeave)="state = ''"></file-drop>
   </ng-template>
 
 </div>

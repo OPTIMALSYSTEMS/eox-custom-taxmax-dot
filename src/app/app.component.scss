@@ -15,6 +15,14 @@
   font-family: monospace;
   transition: all 200ms ease-in-out;
 
+  &.dragover {
+    background-color: $color-accent;
+
+    .dragger > img {
+      display: none;
+    }
+  }
+
   .dragger {
     -webkit-app-region: drag;
     position: absolute;
