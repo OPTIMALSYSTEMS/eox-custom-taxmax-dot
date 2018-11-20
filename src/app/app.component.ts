@@ -74,6 +74,14 @@ export class AppComponent {
               message: e.error.message
             });
             return observableOf(null);
+          }),
+          switchMap(createRes => {
+            this.bpmService.startProcess(
+              APP_CONSTANTS.executableProcessId,
+              {},
+              [{id: createRes.id, type: APP_CONSTANTS.documentType}]
+            ).subscribe();
+            return observableOf(createRes);
           })
         )
       );

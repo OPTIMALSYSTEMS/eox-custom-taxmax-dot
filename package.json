@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron-run": "ng build --output-path electron/app --base-href ./ && cd electron && npm start",
-    "electron-pack-win": "npm run electron && cd electron && npx electron-builder --win"
+    "electron-pack-win": "ng build --output-path electron/app --base-href ./ && cd electron && npx electron-builder --win"
   },
   "private": true,
   "dependencies": {
